@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>White Glove Marketplace | ASM-360</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#444749",
+                        "tertiary-container": "#55657b",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e0e3e5",
+                        "primary-fixed": "#9ef2de",
+                        "surface-container": "#eaedff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#191c1e",
+                        "inverse-primary": "#82d6c2",
+                        "on-primary-fixed": "#00201a",
+                        "on-background": "#131b2e",
+                        "surface": "#faf8ff",
+                        "on-secondary-container": "#626567",
+                        "primary-container": "#0c7161",
+                        "on-tertiary-container": "#d2e3fd",
+                        "secondary": "#5c5f61",
+                        "outline-variant": "#bec9c4",
+                        "background": "#faf8ff",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "on-surface-variant": "#3e4946",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "inverse-on-surface": "#eef0ff",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f2f3ff",
+                        "surface-variant": "#dae2fd",
+                        "surface-dim": "#d2d9f4",
+                        "surface-bright": "#faf8ff",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "primary": "#00574a",
+                        "on-primary-container": "#9df2dd",
+                        "on-surface": "#131b2e",
+                        "outline": "#6e7976",
+                        "on-tertiary-fixed": "#0b1c30",
+                        "surface-container-highest": "#dae2fd",
+                        "secondary-fixed": "#e0e3e5",
+                        "surface-tint": "#006b5b",
+                        "primary-fixed-dim": "#82d6c2",
+                        "tertiary": "#3d4d63",
+                        "on-primary-fixed-variant": "#005144",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#283044"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "mono-label": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "label-md": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
+<nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary tracking-tight">ASM-360</div>
+<div class="hidden md:flex items-center space-x-8 font-label-md text-label-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="/">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/value-proposition/">Value Proposition</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/white-glove/">White Glove</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">search</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">
+                    Get Quote
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A macro cinematic photograph of a high-tech cleanroom facility with soft cyan and green ambient lighting. In the background, sophisticated laboratory equipment and robotic arms are visible through a slight atmospheric haze. The aesthetic is industrial minimalism, reflecting precision and sterile clarity with a bright light-mode feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATY-3QOFTNG1_EdmwhX_gO7HyWGN_I7EwLRp2jXvlYRHGBDtYL1dEDk2JZfiOmKOygvSF2GrtFQlW9PYzxuaNDhw1Clm5RAFI15yJCVaQBYHGWbQMyS50AupHnVX1gqXhpa82d_-DUEBw2g9EvEVd16xxHg9UFiScT9bMbAtvp0wiFnyGQe6JzQSM9lkqjN0p_CZTXADHkoo0vkBdeY7d45pklYsZ7BkvrLle4pnqYBSbshgx7Akno_XW2177JzqYDUaqq2mB9AYcw')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-3xl">
+<div class="mb-6 inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-sm font-mono-label text-mono-label uppercase tracking-widest">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                    Global Asset Marketplace
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8">
+                    Your go-to marketplace for specialty equipment and instrumentation
+                </h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl leading-relaxed">
+                    Connecting qualified buyers with a certified line of known-good industrial assets through our proprietary White Glove ecosystem.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-md text-label-md hover:shadow-lg transition-all flex items-center gap-2" href="#white-glove">
+                        Explore Warehouse <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+<a class="border border-outline text-on-surface px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all" href="#auctions">
+                        View Live Auctions
+                    </a>
+</div>
+</div>
+</section>
+<!-- The White Glove Warehouse Intro -->
+<section class="py-xl px-margin-desktop bg-surface" id="white-glove">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="space-y-8">
+<div>
+<p class="font-mono-label text-mono-label text-primary uppercase mb-2">Exclusivity &amp; Quality</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The White Glove Warehouse</h2>
+</div>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant leading-relaxed">
+<p>An ASM360 proprietary and exclusive market exchange where we selectively offer assets to qualified and targeted buyers that are seeking a Certified line of known good and quality equipment, apparatus, and assets.</p>
+<p>We offer targeted placement, advertising, and outreach to the select portfolio of prospective users and buyers for this line of offering. In addition, ASM360 exhaust all marketing platforms across the web and printed periodicals maximizing exposure to relative audiences in each industry.</p>
+</div>
+<div class="grid grid-cols-2 gap-gutter pt-4">
+<div class="p-6 bg-white shadow-sm border-l-4 border-primary">
+<div class="text-headline-md font-bold text-primary mb-1">40+</div>
+<div class="font-label-md text-label-md text-secondary">Years Industry Experience</div>
+</div>
+<div class="p-6 bg-white shadow-sm border-l-4 border-primary">
+<div class="text-headline-md font-bold text-primary mb-1">100%</div>
+<div class="font-label-md text-label-md text-secondary">Returns &amp; Exchanges</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square overflow-hidden rounded-xl shadow-lg">
+<img alt="Certified Semiconductor Plate" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtfgoyA8Xi2XVl1NLm5FY8ka-XGxhbpy1GwBwuyH_g9fGq51i2BIZ3Abssv2WwuPjgWjsgjMgQd60-FrtdFc1J3MNGsjmdHYp2basgEkfFVPZat216-2-jLX4a6BtjZUnEWDQ7EtR_YDmGEo8qvHnUg06aA8dkqRe3tFnhMl48h1dPl1OWmZ0-Qp0JPKZ9DDzFuLUpBP6bKGiNGazwQRxxfJN903bHcXf6FfBZdOgqGc3ESEKi1sR9BPPVX"/>
+</div>
+<div class="absolute -bottom-8 -left-8 glass-card p-8 rounded-xl shadow-xl max-w-xs hidden md:block">
+<div class="material-symbols-outlined text-primary-container text-4xl mb-4">workspace_premium</div>
+<h4 class="font-headline-md text-headline-md mb-2">Certified Assets</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Every asset in our White Glove inventory undergoes rigorous multi-point functionality verification.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value-Add Services Bento Grid -->
+<section class="py-xl px-margin-desktop bg-white">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg mb-4">Premium Value-Add Services</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Our comprehensive support ecosystem facilitates buyer confidence and yields the best ROI for redeployment and sale.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="p-8 bg-surface-container-low rounded-lg border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">inventory</span>
+<h4 class="font-label-md text-label-md mb-3 text-on-surface">Guaranteed Functional</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified equipment including manuals, accessories, and attachment options.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="p-8 bg-surface-container-low rounded-lg border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">history</span>
+<h4 class="font-label-md text-label-md mb-3 text-on-surface">Pedigree &amp; Maintenance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete PM history and pedigree chain tracking for total transparency.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="p-8 bg-surface-container-low rounded-lg border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">local_shipping</span>
+<h4 class="font-label-md text-label-md mb-3 text-on-surface">White Glove Logistics</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Specialized delivery and installation by expert industrial handlers.</p>
+</div>
+<!-- Service Card 4 -->
+<div class="p-8 bg-surface-container-low rounded-lg border border-outline-variant hover:border-primary transition-all group">
+<span class="material-symbols-outlined text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">assignment_turned_in</span>
+<h4 class="font-label-md text-label-md mb-3 text-on-surface">Certified Calibration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Includes calibration certification and limited 30-day warranty coverage.</p>
+</div>
+</div>
+<div class="mt-lg p-10 bg-primary-container text-on-primary-container rounded-xl flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="space-y-2">
+<h3 class="font-headline-md text-headline-md">Plug and play asset redeployment</h3>
+<p class="font-body-md opacity-90">Maximize your ROI with our high-standard inspection protocols.</p>
+</div>
+<a class="bg-white text-primary-container px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors whitespace-nowrap" href="#">
+                        Visit The Warehouse
+                    </a>
+</div>
+</div>
+</section>
+<!-- Live Auctions Section -->
+<section class="py-xl px-margin-desktop bg-surface-container-low overflow-hidden" id="auctions">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="order-2 lg:order-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Precision Medical Instrumentation" class="w-full aspect-[4/3] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvFBBWPzkJZ2KXsT7NNLypvxEeyoiaxXvFOzzYuBz9yTcNwLZginKChh3UvNAajfBccovzhVWV7zVOrUQ_5vPxdZ6TVjmJIsSpW3typlAVS6BlYa7DoKDnWkaQOHi3nl1BWnyNK1psN9t2jAChxvpmb1YwiqU0YZlHU1q0dMHsvz94c6lDBGDslN1iDZvHjfk0wilK6IfBQSPTk4yP8j1B4Cpu-CcjG9yZuJEuQPcg0QWTRrn_0D0FM-hc"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-error text-white px-3 py-1 rounded-sm font-mono-label text-[10px] uppercase animate-pulse">Live Now</span>
+<span class="bg-surface/80 backdrop-blur-md px-3 py-1 rounded-sm font-mono-label text-[10px] uppercase text-on-surface">Asset 492-B</span>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 space-y-8">
+<div class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-mono-label text-mono-label rounded-sm uppercase">Global Platform</div>
+<h2 class="font-headline-lg text-headline-lg">Widest Offering: Live Auctions</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                            Our widest offering platform where equipment and instruments are offered for quick sale on an as-is basis. Generically offered to a large pool of prospective buyers, brokers, and handlers internationally.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Reserve Control</h5>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">We establish minimum value reserve controls and logistics management for every asset.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface">Fair Market Value</h5>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant">Yielding true market valuations through competitive international bidding wars.</p>
+</div>
+</li>
+</ul>
+<div class="pt-4">
+<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:gap-4 transition-all" href="#">
+                                View Current Auction Catalog <span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA / Contact -->
+<section class="py-xl px-margin-desktop bg-white">
+<div class="max-w-screen-xl mx-auto glass-card rounded-2xl p-12 lg:p-20 text-center border-none shadow-xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -left-24 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl"></div>
+<h2 class="font-headline-xl text-headline-xl mb-6 relative z-10">Ready to manage or dispose of your assets?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto relative z-10">
+                    Seeking to upgrade your capabilities? ASM360 will provide full-cycle management and strategic disposal for your surplus capital equipment.
+                </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6 relative z-10">
+<a class="flex items-center gap-3 font-headline-md text-headline-md text-primary font-bold" href="tel:+19252940220">
+<span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+                        + (925) 294-0220
+                    </a>
+<a class="bg-primary-container text-on-primary-container px-12 py-5 rounded-lg font-label-md text-label-md hover:shadow-xl transition-all" href="#">
+                        Contact Our Experts
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-surface-container-low dark:bg-surface-container-lowest mt-xl">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl w-full max-w-screen-2xl mx-auto">
+<div class="col-span-1 md:col-span-1 space-y-6">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">ASM-360</div>
+<p class="font-body-sm text-body-sm text-secondary">
+                    Consolidated logistics solutions for assets, capital equipment, and comprehensive management of Sunset and Legacy solutions.
+                </p>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Useful Links</h5>
+<ul class="space-y-4 font-body-sm text-body-sm text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Liquidation Process</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Asset Appraisal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Value Proposition</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">General Terms</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Legal</h5>
+<ul class="space-y-4 font-body-sm text-body-sm text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="font-label-md text-label-md text-on-surface uppercase tracking-wider">Contact</h5>
+<div class="space-y-4 font-body-sm text-body-sm text-secondary">
+<p class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">mail</span> info@asm-360.com</p>
+<p class="flex items-start gap-2"><span class="material-symbols-outlined text-[18px]">location_on</span> 7671 Hawthorne Avenue<br/>Livermore, CA 94550</p>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 px-margin-desktop py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-sm text-body-sm text-secondary">© 2024 ASM-360 Asset Management. California Headquarters.</p>
+<div class="flex gap-6">
+<a class="text-secondary hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-secondary hover:text-primary" href="#"><span class="material-symbols-outlined">public</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for reveal animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Ensure nav is sticky but clean
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
