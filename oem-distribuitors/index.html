@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en"><head>
+<html class="light" lang="en">
+    <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>OEM Distributors | ASM-360 Industrial</title>
@@ -124,23 +125,25 @@
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
-<header class="fixed top-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm h-20 transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center px-margin-desktop w-full max-w-7xl mx-auto h-full">
-<div class="flex items-center gap-base">
-<img alt="ASM-360 Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvWJSocui826rTBXCTxKfPkq52ocuQWHnS7ytWpOnZzc7Vva9Bqg4817fTySP4pfEIqf6pQet4Q2biZA8cnci8son4T60inPPYUQ2Fxg8gXFtCfq-f8ejW3gCCIWWnI4tL429hB3p8KBw8sCDI8Jvw_ndil2jWHPlPJAnU4WV6nNM1b-rKpkdDlAaT1_q4wqHQsZPA-9ltA_vhrFRHG-BMELlHtseJn5U1kSq4QT4eoHBRG8o9honrW4vK-"/>
-<span class="font-headline-md text-headline-md font-bold text-primary">ASM-360</span>
-</div>
-<nav class="hidden md:flex gap-md items-center">
-<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="/">About Us</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/value-proposition/">Value Proposition</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/white-glove/">White Glove</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
-</nav>
-<div class="flex items-center gap-md">
-<button class="bg-primary text-on-primary px-md py-sm rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all">Sign In</button>
-</div>
-</div>
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
+    <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4">
+               <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-8" id="nav-links">
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/">About Us</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/white-glove/">White Glove</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform">Get Quote</button>
+            <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
+        </div>
+    </nav>
 </header>
 <main class="pt-20">
 <!-- Hero Section -->
@@ -410,4 +413,26 @@
             observer.observe(el);
         });
     </script>
-</body></html>
+    <script>
+(function () {
+    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
+    const currentPath = normalize(window.location.pathname);
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
+        if (link.target === '_blank') return;
+
+        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+
+        if (linkPath === currentPath) {
+            link.classList.add('text-primary', 'font-bold', 'border-primary');
+            link.classList.remove('text-on-surface-variant', 'border-transparent');
+        } else {
+            link.classList.add('text-on-surface-variant', 'border-transparent');
+            link.classList.remove('text-primary', 'font-bold', 'border-primary');
+        }
+    });
+})();
+</script>
+</body>
+</html>

@@ -131,51 +131,48 @@
 
 <body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
-        <div class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
-            <div class="flex items-center gap-4">
-                <img alt="ASM-360 Logo" class="h-10 w-auto rounded" src="https://placehold.co/200x80/0c7161/ffffff?text=ASM-360" />
-                <span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">ASM-360</span>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-8">
-                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="/">About Us</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/value-proposition/">Value Proposition</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/white-glove/">White Glove</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
-                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
-            </div>
-            
-            <div class="flex items-center gap-4">
-                <button class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform">Get Quote</button>
-                <span class="material-symbols-outlined cursor-pointer md:hidden">menu</span>
-            </div>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
+    <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4">
+           <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-8" id="nav-links">
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/">About Us</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/white-glove/">White Glove</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform">Get Quote</button>
+            <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
         </div>
     </nav>
+</header>
 
-    <!-- Hero Section -->
-    <header class="relative pt-32 pb-xl overflow-hidden bg-white border-b border-outline-variant/30">
-        <div class="max-w-screen-2xl mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 items-center gap-xl">
-            <div class="z-10">
-                <span class="font-mono-label text-mono-label uppercase tracking-widest text-primary mb-4 block">Global Leaders</span>
-                <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">
-                    Our <span class="text-primary-container">Value Proposition</span>
-                </h1>
-                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                    We mobilize competency through the right team. ASM-360 offers strategic leadership in asset management and industrial equipment lifecycle services.
-                </p>
-                <div class="mt-8 flex gap-4">
-                    <button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:shadow-lg transition-all">Explore Services</button>
-                    <button class="border border-outline text-on-surface px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all">Case Studies</button>
-                </div>
-            </div>
-            <div class="relative h-[400px] lg:h-[600px] flex items-center justify-center">
-                <!-- High-tech background element -->
-                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-white/10 to-white z-0"></div>
-            </div>
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] flex items-center overflow-hidden px-margin-desktop">
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center" data-alt="A high-tech industrial robotic arm representing precision asset management, with cool blue ambient lighting in a modern automated facility." style="background-image: url('https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl">
+        <span class="font-mono-label text-mono-label uppercase tracking-widest text-primary mb-4 block">Global Leaders</span>
+        <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">
+            Our <span class="text-primary-container">Value Proposition</span>
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            We mobilize competency through the right team. ASM-360 offers strategic leadership in asset management and industrial equipment lifecycle services.
+        </p>
+        <div class="mt-8 flex gap-4">
+            <button class="bg-primary-container text-on-primary px-8 py-3 rounded-lg font-label-md text-label-md hover:shadow-lg transition-all">Explore Services</button>
+            <button class="border border-outline text-on-surface px-8 py-3 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all">Case Studies</button>
         </div>
-    </header>
+    </div>
+</header>
 
     <!-- Value Proposition Bento Grid -->
     <section class="py-xl bg-surface-container-low">
@@ -511,5 +508,26 @@
             observer.observe(card);
         });
     </script>
+    <script>
+(function () {
+    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
+    const currentPath = normalize(window.location.pathname);
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
+        if (link.target === '_blank') return;
+
+        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+
+        if (linkPath === currentPath) {
+            link.classList.add('text-primary', 'font-bold', 'border-primary');
+            link.classList.remove('text-on-surface-variant', 'border-transparent');
+        } else {
+            link.classList.add('text-on-surface-variant', 'border-transparent');
+            link.classList.remove('text-primary', 'font-bold', 'border-primary');
+        }
+    });
+})();
+</script>
 </body>
 </html>
