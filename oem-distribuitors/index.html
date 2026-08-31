@@ -118,6 +118,12 @@
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
         }
+        .pill-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pill-btn:hover {
+            transform: translateY(-2px);
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #faf8ff; }
         ::-webkit-scrollbar-thumb { background: #00574a; border-radius: 4px; }
@@ -160,24 +166,83 @@
 <p class="font-body-lg text-body-lg text-secondary max-w-xl">
                         ASM-360 acts as a comprehensive sourcing, procurement, logistics, asset management, and disposition partner, supporting OEMs as an accredited reseller.
                     </p>
-<div class="flex flex-wrap gap-md pt-base">
-<button class="bg-primary text-on-primary px-xl py-md rounded font-label-md text-label-md flex items-center gap-sm hover:translate-x-1 transition-transform">
+<div class="flex flex-wrap items-center gap-3 pt-base">
+<button class="pill-btn bg-primary text-on-primary px-xl py-md rounded-full font-label-md text-label-md flex items-center gap-sm hover:shadow-lg transition-all">
 <span>Explore More</span>
 <span class="material-symbols-outlined">arrow_forward</span>
 </button>
-<button class="border border-outline px-xl py-md rounded font-label-md text-label-md hover:bg-surface-variant transition-colors">
+<button class="pill-btn border-2 border-outline px-xl py-md rounded-full font-label-md text-label-md hover:bg-surface-variant transition-colors">
                             Contact Specialist
                         </button>
+<a class="pill-btn flex items-center gap-1 px-md py-md rounded-full font-label-md text-label-md text-secondary hover:text-primary group" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">
+                            View Marketplace
+                            <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">trending_flat</span>
+</a>
 </div>
 </div>
 <div class="relative group">
 <div class="absolute -inset-4 bg-primary/5 rounded-xl blur-2xl group-hover:bg-primary/10 transition-all duration-500"></div>
 <div class="relative rounded-xl overflow-hidden shadow-2xl border border-outline-variant">
-<img class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High-tech laboratory setting with professional technicians in white cleanroom suits handling delicate microelectronics. The scene is illuminated by crisp, sterile white overhead lighting, emphasizing precision and industrial cleanliness. The color palette is dominated by whites, light grays, and the signature brand green accents, reflecting a high-end manufacturing environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApViyXjQdFV_Se-D57ZB_mXy1z-vy0bEMRt8Wzkn5m-0iC-iND7OVYonO8R9K22nWL_qaSJAjSvmmlfXZLpdwdTMEigZJ4k58axbrv5fbpbG6ih2QjHEFX5mrBVNWs0wTYXWUIUJGuBePERFTvdauJ1_X3axyl2EZK-V3leP_EIQeNF48vOjnG--WtwKKU014N9vwMBcY0QJpuCoWPlGi3a_wf3lTwovNFuNWUdKW8OWU4SYOYeNo7EIDvMPIenlyFPY4p4nwUPWnA"/>
+<img class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" alt="High-tech laboratory setting with professional technicians in white cleanroom suits handling delicate microelectronics" src="https://images.unsplash.com/photo-1748002388689-c62b45d5c28b?auto=format&fit=crop&w=1000&q=80"/>
 </div>
 </div>
 </div>
 </section>
+
+<!-- What Do You Need Today? - EquipNet-style action blocks -->
+<section class="py-xl bg-white">
+<div class="container mx-auto px-margin-desktop">
+<div class="text-center mb-lg">
+<span class="font-mono-label text-mono-label text-primary uppercase tracking-widest mb-xs block">Get Started</span>
+<h2 class="font-headline-lg text-headline-lg">What Do You Need Today?</h2>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Column 1: Buy Equipment -->
+<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md mb-base">Buy Equipment</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md">
+                        Thousands of certified industrial and lab equipment ready for immediate redeployment.
+                    </p>
+<div class="flex flex-wrap gap-sm">
+<a class="pill-btn bg-primary text-on-primary px-md py-sm rounded-full text-sm font-bold" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">Marketplace</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Auctions</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Own It Now</a>
+</div>
+</div>
+
+<!-- Column 2: Sell Equipment -->
+<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">sell</span>
+<h3 class="font-headline-md text-headline-md mb-base">Sell Equipment</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md">
+                        Plant closures, reorganizations, or surplus: we recover the maximum value from your assets.
+                    </p>
+<div class="flex flex-wrap gap-sm">
+<a class="pill-btn bg-primary text-on-primary px-md py-sm rounded-full text-sm font-bold" href="#">List a Single Asset</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">List Multiple Assets</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Plant Closures</a>
+</div>
+</div>
+
+<!-- Column 3: Manage Assets -->
+<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-base">dashboard</span>
+<h3 class="font-headline-md text-headline-md mb-base">Manage Assets</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md">
+                        Turnkey programs to identify, track, and redeploy equipment across your entire organization.
+                    </p>
+<div class="flex flex-wrap gap-sm">
+<a class="pill-btn bg-primary text-on-primary px-md py-sm rounded-full text-sm font-bold" href="#">Global Program</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Regional Program</a>
+<a class="pill-btn bg-white border border-primary/30 text-primary px-md py-sm rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Multi-Site Program</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <!-- Value Statement -->
 <section class="py-xl bg-surface-container-low border-y border-outline-variant/30">
 <div class="container mx-auto px-margin-desktop">
@@ -221,7 +286,7 @@
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
 <!-- IP Vaulting -->
 <div class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container shadow-sm border border-outline-variant h-[400px]">
-<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000" data-alt="A secure, high-tech industrial server room or storage facility featuring clean white walls and glowing green LED indicators on equipment racks. The lighting is sterile and blue-toned, emphasizing security and precision. This image represents IP Vaulting services in a professional manufacturing context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdkyCeQgR-he9qe3kLsgRgGDeme_IeE6zzJ6-4FMt_ElPKotV8bKVUniURgsZsdqJU12TEhFD8KBuS0gkSbbrD5HgMv26Z5aBuSUtzzZB8H4cmbcuD_OmUkNntoZIoPG_T_cHNggvzJE0NF9L2wHueouinJ5UvrRRK_fzR5byCTokAazSFmLWXiu-nqfwrseBT1hdlV97vzWcfu9O_tMb5-G58jMPbhqrMk9YofrY8hoCc-VEyS6cpp5pA0g1HvpaQ9F_cVEFeFK9W"/>
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-1000" alt="Secure high-tech server room representing IP Vaulting services" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-lg w-full">
 <h3 class="font-headline-md text-headline-md mb-base">IP Vaulting</h3>
@@ -245,7 +310,7 @@
 <!-- Redesign -->
 <div class="md:col-span-4 bg-surface border border-outline-variant p-lg rounded-xl flex flex-col justify-between group">
 <div class="h-48 rounded overflow-hidden mb-base">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Close-up of a high-end motherboard being analyzed under a microscope in a bright laboratory setting. Professional blue-gloved hands are visible adjusting the component. The lighting is crisp and detailed, showcasing the intricate technical nature of PC redesign and remanufacturing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxE9By6-oNIGCQAQAMmxYwt7ehPXKQjvc5g07K0eeJjW-inJ_q6e0Qg91UXpWg2Pz7Ak6v5vx2Z1tr5XVpmv-8rDFnF8m3AYKLk2rfqfZy9vQ5fvHJHdBG1WXYdDOSNNd8OJcGEE5reOtIz87e9wvyQM83aS8AC3k206qszXyHZh88duSMETxJVmdHsWlXFcmFrHX4s71m28zDc4KCmI-p38B5Xy2nUX6pqKz96z26z_NuDsgEazrZImeIQVLjKM0Ko4Xh7XnoNhTF"/>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Close-up of a motherboard being analyzed for PC redesign and remanufacturing" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"/>
 </div>
 <div>
 <h3 class="font-headline-md text-headline-md mb-base">PC Redesign &amp; Remanufacture</h3>
@@ -261,7 +326,7 @@
 <a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary" href="#">EXPLORE CEDs <span class="material-symbols-outlined">chevron_right</span></a>
 </div>
 <div class="relative h-full overflow-hidden">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A series of high-precision electronic test equipment devices arranged on a sterile white workbench. The lighting is professional and highlights the sleek, high-tech design of the hardware. Brand green accents are visible in the device interface displays, maintaining color cohesion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkk7OgFk4_cbSCEO9L_IN9SpmHSlKIlwHJlv7rDEtnMiUJXJHw9ML2OQY4FF_Uq3fLPcIusSJyt1cQRM2x5eITjAAJNyIWc1LPVIl80zESw2M_urwW5I3csoaGyH6TSwDbqQlcmlpPIt5HIZebFr2N0voQFORCIXuZNuTCnEDxLlwtJTydx4CZfy4gyJcDhl1ncwdkXnhkoR-SMNdNFcXlYk3A0mBK6-eP3AitVKayW0trD7i2dHC9ElAuOumt42OR_sDY93ExgEeK"/>
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="High-precision electronic test equipment on a sterile workbench" src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1000&q=80"/>
 </div>
 </div>
 </div>
@@ -275,7 +340,7 @@
 </div>
 <div class="container mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-xl items-center relative z-10">
 <div class="order-2 lg:order-1">
-<img class="rounded-xl shadow-lg border border-white" data-alt="Professional meeting in a modern corporate boardroom with views of a tech hub. A diverse group of specialists are reviewing technical documents and GSA schedules. The lighting is warm yet professional, conveying a sense of partnership and trust. Clean industrial aesthetic with modern furniture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdm-KI8fRIp3gJV8-rvLgqtd_w6DS_pSjLW4mD7BFm1tWBjNnWLnb69LBI1oA7NUsdsN726NTby8LpkichMYhxYEu2KIZG6JUX90xK6vpydM9JMczkUGTpmUUbJ13b_FowzlNYJ9oUPAFbiw14X6OX3D2uL1hGBqVceRlnGV3_rVxLOwz2nCwYpzAyrdrexivjEireITNreBwsvCYC6eMAIpXFtitpLeqD_xNjgpIzVcPURCIoorYPuqistroObG2Z2KAuDlu4dyLR"/>
+<img class="rounded-xl shadow-lg border border-white" alt="Professional meeting in a modern corporate boardroom reviewing GSA schedules" src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=1000&q=80"/>
 </div>
 <div class="order-1 lg:order-2 space-y-md">
 <span class="font-mono-label text-mono-label text-primary uppercase">Accredited Reseller</span>
@@ -293,7 +358,7 @@
 <span class="font-headline-md text-primary">925.294.0220</span>
 <span class="font-mono-label text-xs uppercase opacity-60">Call us for immediate support</span>
 </div>
-<button class="bg-primary text-on-primary px-lg py-sm rounded-lg font-label-md hover:bg-primary-container transition-colors">
+<button class="pill-btn bg-primary text-on-primary px-lg py-sm rounded-full font-label-md hover:bg-primary-container transition-colors">
                             Contact Us
                         </button>
 </div>
@@ -329,12 +394,35 @@
 </div>
 </div>
 </section>
+
+<!-- Closing CTA -->
+<section class="py-xl px-margin-desktop">
+<div class="container mx-auto">
+<div class="bg-primary text-on-primary p-lg md:p-xl rounded-xl flex flex-col md:flex-row gap-lg items-center justify-between shadow-2xl relative overflow-hidden">
+<div class="relative z-10 flex-1 space-y-base">
+<h2 class="font-headline-lg text-headline-lg">Ready to source, distribute, or manage your OEM products?</h2>
+<p class="opacity-80 font-body-md text-body-md max-w-xl">ASM360 will connect you with the right sourcing, procurement, and asset management program for your organization.</p>
+<div class="flex flex-wrap gap-3 pt-base">
+<button class="pill-btn bg-white text-primary px-lg py-md rounded-full font-label-md text-label-md hover:bg-surface-container transition-colors">Contact Us</button>
+<a class="pill-btn border-2 border-white text-white px-lg py-md rounded-full font-label-md text-label-md hover:bg-white/10 transition-colors" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">View Marketplace</a>
+<a class="pill-btn border-2 border-white text-white px-lg py-md rounded-full font-label-md text-label-md hover:bg-white/10 transition-colors" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">View Auctions</a>
+<a class="flex items-center gap-xs font-label-md text-label-md px-md py-md hover:opacity-80" href="tel:9252940220">
+<span class="material-symbols-outlined">phone_in_talk</span> +(925) 294-0220
+</a>
+</div>
+</div>
+<div class="relative z-10 hidden md:block">
+<span class="material-symbols-outlined text-[140px] opacity-20">handshake</span>
+</div>
+</div>
+</div>
+</section>
 </main>
 <!-- Footer -->
 <footer class="bg-surface-container-lowest border-t border-outline-variant/30 w-full py-xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
 <div class="md:col-span-1 space-y-md">
 <div class="flex items-center gap-xs">
-<img alt="Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLvWJSocui826rTBXCTxKfPkq52ocuQWHnS7ytWpOnZzc7Vva9Bqg4817fTySP4pfEIqf6pQet4Q2biZA8cnci8son4T60inPPYUQ2Fxg8gXFtCfq-f8ejW3gCCIWWnI4tL429hB3p8KBw8sCDI8Jvw_ndil2jWHPlPJAnU4WV6nNM1b-rKpkdDlAaT1_q4wqHQsZPA-9ltA_vhrFRHG-BMELlHtseJn5U1kSq4QT4eoHBRG8o9honrW4vK-"/>
+<img alt="ASM-360 Logo" class="h-8 w-auto rounded" src="https://placehold.co/200x80/0c7161/ffffff?text=ASM-360"/>
 <span class="font-headline-lg text-headline-lg text-primary">ASM-360</span>
 </div>
 <p class="font-body-sm text-body-sm text-secondary opacity-80 leading-relaxed">
@@ -404,6 +492,7 @@
                 if (entry.isIntersecting) {
                     entry.target.classList.add('opacity-100', 'translate-y-0');
                     entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -411,6 +500,23 @@
         document.querySelectorAll('section > div').forEach(el => {
             el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
             observer.observe(el);
+        });
+
+        // Stagger reveal for the action-block cards
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-6');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.action-card').forEach((card, i) => {
+            card.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
+            card.style.transitionDelay = `${i * 120}ms`;
+            cardObserver.observe(card);
         });
     </script>
     <script>

@@ -107,6 +107,12 @@
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
+        .pill-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pill-btn:hover {
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md">
@@ -149,16 +155,71 @@
 <p class="font-body-lg text-body-lg text-secondary mb-10 max-w-2xl leading-relaxed">
                     Connecting qualified buyers with a certified line of known-good industrial assets through our proprietary White Glove ecosystem.
                 </p>
-<div class="flex flex-wrap gap-4">
-<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-md text-label-md hover:shadow-lg transition-all flex items-center gap-2" href="#white-glove">
+<div class="flex flex-wrap gap-3">
+<a class="pill-btn bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-md text-label-md hover:shadow-lg transition-all flex items-center gap-2" href="#white-glove">
                         Explore Warehouse <span class="material-symbols-outlined">arrow_forward</span>
 </a>
-<a class="border border-outline text-on-surface px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-all" href="#auctions">
+<a class="pill-btn border-2 border-outline text-on-surface px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container-low transition-all" href="#auctions">
                         View Live Auctions
                     </a>
 </div>
 </div>
 </section>
+
+<!-- What Do You Need Today? - EquipNet-style action blocks -->
+<section class="py-16 px-margin-desktop bg-surface">
+<div class="max-w-screen-2xl mx-auto">
+<div class="text-center mb-10">
+<span class="font-mono-label text-mono-label text-primary uppercase tracking-widest mb-2 block">Get Started</span>
+<h2 class="font-headline-lg text-headline-lg">What Do You Need Today?</h2>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Column 1: Buy Equipment -->
+<div class="glass-card action-card rounded-2xl p-8 border border-primary-container/10 hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md mb-2">Buy Equipment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                        Thousands of certified industrial and lab equipment ready for immediate redeployment.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<a class="pill-btn bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-bold" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">Marketplace</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Auctions</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Own It Now</a>
+</div>
+</div>
+
+<!-- Column 2: Sell Equipment -->
+<div class="glass-card action-card rounded-2xl p-8 border border-primary-container/10 hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">sell</span>
+<h3 class="font-headline-md text-headline-md mb-2">Sell Equipment</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                        Plant closures, reorganizations, or surplus: we recover the maximum value from your assets.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<a class="pill-btn bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-bold" href="#">List a Single Asset</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="#">List Multiple Assets</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="#">Plant Closures</a>
+</div>
+</div>
+
+<!-- Column 3: Manage Assets -->
+<div class="glass-card action-card rounded-2xl p-8 border border-primary-container/10 hover:shadow-lg transition-all duration-300 flex flex-col">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">dashboard</span>
+<h3 class="font-headline-md text-headline-md mb-2">Manage Assets</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                        Turnkey programs to identify, track, and redeploy equipment across your entire organization.
+                    </p>
+<div class="flex flex-wrap gap-3">
+<a class="pill-btn bg-primary-container text-on-primary-container px-5 py-2.5 rounded-full text-sm font-bold" href="#">Global Program</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="#">Regional Program</a>
+<a class="pill-btn bg-white border border-primary-container/30 text-primary-container px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="#">Multi-Site Program</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <!-- The White Glove Warehouse Intro -->
 <section class="py-xl px-margin-desktop bg-surface" id="white-glove">
 <div class="max-w-screen-2xl mx-auto">
@@ -297,10 +358,9 @@
 </div>
 </li>
 </ul>
-<div class="pt-4">
-<a class="inline-flex items-center gap-2 font-label-md text-label-md text-primary hover:gap-4 transition-all" href="#">
-                                View Current Auction Catalog <span class="material-symbols-outlined">trending_flat</span>
-</a>
+<div class="pt-4 flex flex-wrap gap-3">
+<a class="pill-btn bg-primary-container text-on-primary-container px-6 py-3 rounded-full text-sm font-bold" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">View Current Auction Catalog</a>
+<a class="pill-btn border border-primary-container/30 text-primary-container px-6 py-3 rounded-full text-sm font-bold hover:bg-primary-container hover:text-white" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">Browse Marketplace</a>
 </div>
 </div>
 </div>
@@ -315,13 +375,16 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto relative z-10">
                     Seeking to upgrade your capabilities? ASM360 will provide full-cycle management and strategic disposal for your surplus capital equipment.
                 </p>
-<div class="flex flex-col sm:flex-row justify-center items-center gap-6 relative z-10">
+<div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 relative z-10">
 <a class="flex items-center gap-3 font-headline-md text-headline-md text-primary font-bold" href="tel:+19252940220">
 <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
                         + (925) 294-0220
                     </a>
-<a class="bg-primary-container text-on-primary-container px-12 py-5 rounded-lg font-label-md text-label-md hover:shadow-xl transition-all" href="#">
+<a class="pill-btn bg-primary-container text-on-primary-container px-12 py-5 rounded-full font-label-md text-label-md hover:shadow-xl transition-all" href="#">
                         Contact Our Experts
+                    </a>
+<a class="pill-btn border-2 border-primary-container text-primary-container px-12 py-5 rounded-full font-label-md text-label-md hover:bg-primary-container hover:text-white transition-all" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">
+                        View Marketplace
                     </a>
 </div>
 </div>
@@ -370,55 +433,6 @@
 </div>
 </footer>
 <script>
-        // Simple intersection observer for reveal animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
-        });
-
-        // Ensure nav is sticky but clean
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md');
-                header.classList.remove('shadow-sm');
-            } else {
-                header.classList.remove('shadow-md');
-                header.classList.add('shadow-sm');
-            }
-        });
-    </script>
-    <script>
-(function () {
-    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
-    const currentPath = normalize(window.location.pathname);
-
-    document.querySelectorAll('.nav-link').forEach((link) => {
-        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
-        if (link.target === '_blank') return;
-
-        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
-
-        if (linkPath === currentPath) {
-            link.classList.add('text-primary', 'font-bold', 'border-primary');
-            link.classList.remove('text-on-surface-variant', 'border-transparent');
-        } else {
-            link.classList.add('text-on-surface-variant', 'border-transparent');
-            link.classList.remove('text-primary', 'font-bold', 'border-primary');
-        }
-    });
-})();
-</script>
-<script>
 (function () {
     // Scroll reveal: secciones completas
     const sectionObserver = new IntersectionObserver((entries) => {
@@ -436,7 +450,7 @@
         sectionObserver.observe(section);
     });
 
-    // Stagger para las 4 tarjetas de Value-Add Services
+    // Stagger para las tarjetas de acción y de Value-Add Services
     const cardObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -447,7 +461,7 @@
         });
     }, { threshold: 0.15 });
 
-    document.querySelectorAll('.group.bg-surface-container-low').forEach((card, i) => {
+    document.querySelectorAll('.action-card, .group.bg-surface-container-low').forEach((card, i) => {
         card.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
         card.style.transitionDelay = `${i * 120}ms`;
         cardObserver.observe(card);
@@ -462,6 +476,27 @@
         } else {
             header.classList.remove('shadow-md');
             header.classList.add('shadow-sm');
+        }
+    });
+})();
+</script>
+    <script>
+(function () {
+    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
+    const currentPath = normalize(window.location.pathname);
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
+        if (link.target === '_blank') return;
+
+        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+
+        if (linkPath === currentPath) {
+            link.classList.add('text-primary', 'font-bold', 'border-primary');
+            link.classList.remove('text-on-surface-variant', 'border-transparent');
+        } else {
+            link.classList.add('text-on-surface-variant', 'border-transparent');
+            link.classList.remove('text-primary', 'font-bold', 'border-primary');
         }
     });
 })();

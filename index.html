@@ -133,6 +133,12 @@
             transform: translateY(-4px);
             box-shadow: 0 20px 40px -10px rgba(12, 113, 97, 0.1);
         }
+        .pill-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pill-btn:hover {
+            transform: translateY(-2px);
+        }
         body {
             background-color: #ffffff;
             overflow-x: hidden;
@@ -175,14 +181,20 @@
                     <p class="text-on-surface-variant text-xl max-w-xl font-body-md leading-relaxed">
                         USA-based, woman and minority owned specialists in asset management, machine and facilities disposition, and surplus asset liquidation.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold flex items-center gap-2 group transition-all hover:shadow-lg">
-                            Explore Marketplace
-                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">trending_flat</span>
+                    <!-- Dual-path CTA: buy / sell / marketplace -->
+                    <div class="flex flex-wrap gap-3 pt-4">
+                        <button class="pill-btn bg-primary text-on-primary px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:shadow-lg">
+                            <span class="material-symbols-outlined text-lg">shopping_cart</span>
+                            Buy Equipment
                         </button>
-                        <button class="bg-white border border-outline/30 text-on-surface px-8 py-4 rounded-xl font-bold hover:bg-surface-container-low transition-all">
-                            Our Services
+                        <button class="pill-btn bg-white border-2 border-primary text-primary px-6 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-primary hover:text-white">
+                            <span class="material-symbols-outlined text-lg">sell</span>
+                            Sell Equipment
                         </button>
+                        <a class="pill-btn flex items-center gap-1 px-4 py-3 rounded-full font-bold text-on-surface-variant hover:text-primary group" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">
+                            View Marketplace
+                            <span class="material-symbols-outlined text-lg transition-transform group-hover:translate-x-1">trending_flat</span>
+                        </a>
                     </div>
                 </div>
                 
@@ -236,6 +248,58 @@
                 </div>
             </div>
         </div>
+
+        <!-- What do you need today? - EquipNet-style action blocks -->
+        <section class="py-16 px-margin-desktop max-w-7xl mx-auto">
+            <div class="mb-10 text-center">
+                <span class="font-label-md text-primary uppercase tracking-widest">Get Started</span>
+                <h2 class="font-headline-xl mt-2 text-on-surface">What Do You Need Today?</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap">
+                <!-- Column 1: Buy Equipment -->
+                <div class="glass-panel bento-card-hover rounded-3xl p-8 border border-primary/10 flex flex-col">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">shopping_cart</span>
+                    <h3 class="text-xl font-bold text-on-surface mb-2">Buy Equipment</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6 text-sm">
+                        Thousands of certified industrial and lab equipment ready for immediate redeployment.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a class="pill-btn bg-primary text-on-primary px-5 py-2.5 rounded-full text-sm font-bold" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">Marketplace</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Auctions</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Own It Now</a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Sell Equipment -->
+                <div class="glass-panel bento-card-hover rounded-3xl p-8 border border-primary/10 flex flex-col">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">sell</span>
+                    <h3 class="text-xl font-bold text-on-surface mb-2">Sell Equipment</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6 text-sm">
+                        Plant closures, reorganizations, or surplus: we recover the maximum value from your assets.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a class="pill-btn bg-primary text-on-primary px-5 py-2.5 rounded-full text-sm font-bold" href="#">List a Single Asset</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">List Multiple Assets</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Plant Closures</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Manage Assets -->
+                <div class="glass-panel bento-card-hover rounded-3xl p-8 border border-primary/10 flex flex-col">
+                    <span class="material-symbols-outlined text-primary text-4xl mb-4">dashboard</span>
+                    <h3 class="text-xl font-bold text-on-surface mb-2">Manage Assets</h3>
+                    <p class="text-on-surface-variant leading-relaxed mb-6 text-sm">
+                        Turnkey programs to identify, track, and redeploy equipment across your entire organization.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a class="pill-btn bg-primary text-on-primary px-5 py-2.5 rounded-full text-sm font-bold" href="#">Global Program</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Regional Program</a>
+                        <a class="pill-btn bg-white border border-primary/30 text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="#">Multi-Site Program</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Markets we Serve Section (Bento Grid) -->
         <section class="py-32 px-margin-desktop max-w-7xl mx-auto">
@@ -394,8 +458,9 @@
                     <p class="text-white/80 text-lg leading-relaxed">
                         Our proprietary and exclusive market exchange platform where we selectively offer assets to qualified and targeted buyers seeking certified quality equipment.
                     </p>
-                    <div class="flex gap-4">
-                        <button class="bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container transition-all">Explore Marketplace</button>
+                    <div class="flex flex-wrap gap-4">
+                        <a class="pill-btn bg-white text-primary px-8 py-4 rounded-xl font-bold hover:bg-surface-container inline-block" href="https://thewhiteglovewarehouse.com" target="_blank" rel="noopener">Explore Marketplace</a>
+                        <a class="pill-btn bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 inline-block" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">View Auctions</a>
                         <a class="flex items-center gap-2 font-bold px-4 py-4 hover:opacity-80" href="tel:9252940220">
                             <span class="material-symbols-outlined">phone_in_talk</span> +(925) 294-0220
                         </a>
@@ -509,59 +574,61 @@
         }
     </script>
     <script>
-(function () {
-    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
-    const currentPath = normalize(window.location.pathname);
+    (function () {
+        // Scroll reveal: secciones completas
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-    document.querySelectorAll('.nav-link').forEach((link) => {
-        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
-        if (link.target === '_blank') return;
+        document.querySelectorAll('main > section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            sectionObserver.observe(section);
+        });
 
-        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+        // Scroll reveal con stagger para las tarjetas del bento grid
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-6');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
-        if (linkPath === currentPath) {
-            link.classList.add('text-primary', 'font-bold', 'border-primary');
-            link.classList.remove('text-on-surface-variant', 'border-transparent');
-        } else {
-            link.classList.add('text-on-surface-variant', 'border-transparent');
-            link.classList.remove('text-primary', 'font-bold', 'border-primary');
-        }
-    });
-})();
-</script>
-<script>
-    // Scroll reveal: secciones completas
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-10');
-                revealObserver.unobserve(entry.target); // solo una vez
+        document.querySelectorAll('.bento-card-hover').forEach((card, i) => {
+            card.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
+            card.style.transitionDelay = `${i * 100}ms`;
+            cardObserver.observe(card);
+        });
+    })();
+    </script>
+    <script>
+    (function () {
+        const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
+        const currentPath = normalize(window.location.pathname);
+
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
+            if (link.target === '_blank') return;
+
+            const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+
+            if (linkPath === currentPath) {
+                link.classList.add('text-primary', 'font-bold', 'border-primary');
+                link.classList.remove('text-on-surface-variant', 'border-transparent');
+            } else {
+                link.classList.add('text-on-surface-variant', 'border-transparent');
+                link.classList.remove('text-primary', 'font-bold', 'border-primary');
             }
         });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('main > section').forEach(section => {
-        section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
-        revealObserver.observe(section);
-    });
-
-    // Scroll reveal con stagger para las tarjetas del bento grid
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('opacity-100', 'translate-y-0');
-                entry.target.classList.remove('opacity-0', 'translate-y-6');
-                cardObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('.bento-card-hover').forEach((card, i) => {
-        card.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
-        card.style.transitionDelay = `${i * 100}ms`;
-        cardObserver.observe(card);
-    });
-</script>
+    })();
+    </script>
 </body>
 </html>
