@@ -146,9 +146,19 @@
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/" target="_blank">Auctions</a>
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/gallery" target="_blank">Marketplace</a>
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/contact/">Contact</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Manage Equipment</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
+                    Services
+                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                </button>
+                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Manage Equipment</a>
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/white-glove/">White Glove</a>
+                    </div>
+                </div>
+            </div>
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/white-glove/">White Glove</a>
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
         </div>
 
@@ -370,6 +380,16 @@
         } else {
             link.classList.add('text-on-surface-variant', 'border-transparent');
             link.classList.remove('text-primary', 'font-bold', 'border-primary');
+        }
+    });
+
+    // Si un item dentro del dropdown "Services" quedó activo, resalta también el trigger
+    document.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
+        const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        const activeItem = dropdown.querySelector('.nav-link.text-primary');
+        if (trigger && activeItem) {
+            trigger.classList.add('text-primary', 'font-bold', 'border-primary');
+            trigger.classList.remove('text-on-surface-variant', 'border-transparent');
         }
     });
 })();
