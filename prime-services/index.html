@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prime Services | ASM-360</title>
+    <meta content="ASM-360 Prime Services: certified, white-glove asset solutions — from verified equipment and calibration to logistics and live auctions." name="description" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- Theme Configuration (matches Value Proposition) -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed": "#0b1c30",
+                        "on-secondary-container": "#626567",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e2e7ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#eaedff",
+                        "on-surface-variant": "#3e4946",
+                        "on-primary-fixed": "#00201a",
+                        "secondary": "#5c5f61",
+                        "on-background": "#131b2e",
+                        "outline-variant": "#bec9c4",
+                        "surface-container-low": "#f2f3ff",
+                        "error-container": "#ffdad6",
+                        "outline": "#6e7976",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-secondary-fixed-variant": "#444749",
+                        "on-primary-fixed-variant": "#005144",
+                        "primary-fixed": "#9ef2de",
+                        "background": "#faf8ff",
+                        "inverse-surface": "#283044",
+                        "surface-container-highest": "#dae2fd",
+                        "primary": "#00574a",
+                        "on-surface": "#131b2e",
+                        "on-tertiary-fixed-variant": "#38485d",
+                        "primary-container": "#0c7161",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d2d9f4",
+                        "surface": "#faf8ff",
+                        "tertiary-fixed": "#d3e4fe",
+                        "surface-tint": "#006b5b",
+                        "surface-bright": "#faf8ff",
+                        "surface-variant": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c4c7c9",
+                        "inverse-primary": "#82d6c2",
+                        "primary-fixed-dim": "#82d6c2",
+                        "on-secondary-fixed": "#191c1e",
+                        "secondary-fixed": "#e0e3e5",
+                        "secondary-container": "#e0e3e5",
+                        "on-primary-container": "#9df2dd",
+                        "tertiary-fixed-dim": "#b7c8e1",
+                        "tertiary": "#3d4d63",
+                        "tertiary-container": "#55657b",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#d2e3fd",
+                        "on-error-container": "#93000a"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px"
+                    },
+                    fontFamily: {
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "label-md": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Space Grotesk"],
+                        "mono-label": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"],
+                        "body-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "mono-label": ["12px", {"lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 8px 30px rgba(15, 23, 42, 0.08);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .pill-btn {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .pill-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
+    <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4">
+            <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
+        </div>
+
+        <div class="hidden md:flex items-center gap-8" id="nav-links">
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/">About Us</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
+                    Auctions
+                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                </button>
+                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://auctions.asminc360.com" target="_blank">Dedicated Auctions</a>
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Prime Auctions</a>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/gallery" target="_blank">Marketplace</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/contact/">Contact</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
+                    Services
+                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                </button>
+                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/prime-services/">Prime Services</a>
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://thewhiteglovewarehouse.com/services/" target="_blank">White Glove</a>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+<a class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform" href="https://auctions.asminc360.com/sign-up" target="_blank" rel="noopener">Start Bidding</a>
+            <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<header class="relative min-h-[80vh] flex items-center overflow-hidden px-margin-desktop">
+    <div class="absolute inset-0 z-0">
+        <div class="w-full h-full bg-cover bg-center" data-alt="A macro cinematic photograph of a high-tech cleanroom facility with soft cyan and green ambient lighting, reflecting precision and sterile clarity." style="background-image: url('https://images.unsplash.com/photo-1748349221526-33b51820b21e?auto=format&fit=crop&w=1920&q=80')"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl">
+        <span class="font-mono-label text-mono-label uppercase tracking-widest text-primary mb-4 block">ASM-360 Prime Services</span>
+        <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">
+            Certified <span class="text-primary-container">Prime Services</span> for Every Asset
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Verified equipment, calibration, logistics, and live auctions — one certified ecosystem connecting qualified buyers with known-good industrial assets.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a class="pill-btn bg-primary-container text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:shadow-lg transition-all flex items-center gap-2" href="#services">
+                Explore Services
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+            <a class="pill-btn border-2 border-outline text-on-surface px-8 py-3 rounded-full font-label-md text-label-md hover:bg-surface-container transition-all" href="#auctions">
+                View Live Auctions
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- What Do You Need Today? - EquipNet-style action blocks -->
+<section class="py-16 px-margin-desktop bg-surface-container-low">
+    <div class="max-w-screen-2xl mx-auto">
+        <div class="text-center mb-10">
+            <span class="font-mono-label text-mono-label text-primary uppercase tracking-widest mb-2 block">Get Started</span>
+            <h2 class="font-headline-lg text-headline-lg">What Do You Need Today?</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Column 1: Buy Equipment -->
+            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <span class="material-symbols-outlined text-primary-container text-4xl mb-4">shopping_cart</span>
+                <h3 class="font-headline-md text-headline-md mb-2">Buy Equipment</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                    Certified equipment ready for immediate redeployment.
+                </p>
+                <div class="flex flex-col gap-3 mt-auto">
+<a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Marketplace</a>
+                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/gallery" target="_blank" rel="noopener">Auctions</a>
+                </div>
+            </div>
+
+            <!-- Column 2: Sell Equipment -->
+            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <span class="material-symbols-outlined text-primary-container text-4xl mb-4">sell</span>
+                <h3 class="font-headline-md text-headline-md mb-2">Sell Equipment</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                    We recover maximum value from surplus, closures, and reorganizations.
+                </p>
+                <div class="flex flex-col gap-3 mt-auto">
+                       <a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="https://auctions.asminc360.com/sign-up">List Your Assets</a>
+                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="/contact/">Plant Closures</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Manage Assets -->
+            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <span class="material-symbols-outlined text-primary-container text-4xl mb-4">dashboard</span>
+                <h3 class="font-headline-md text-headline-md mb-2">Manage Assets</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+                    Turnkey programs to identify, track, and redeploy equipment across your organization.
+                </p>
+                <div class="flex flex-col gap-3 mt-auto">
+              <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://thewhiteglovewarehouse.com/services/">Corporate Global Program</a>
+                        <a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="/oem-distribuitors/">Manufacturer</a>
+                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="prime-services/">White Glove Intra-Sites</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Core Competencies -->
+<section class="py-20 px-margin-desktop max-w-screen-2xl mx-auto" id="services">
+    <div class="text-center mb-12">
+        <span class="font-mono-label text-mono-label text-primary uppercase tracking-widest">Exclusivity &amp; Quality</span>
+        <h2 class="font-headline-xl text-headline-xl mt-2 text-on-surface">Core Competencies</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">
+            An ASM360 proprietary market exchange offering a certified line of known-good equipment to qualified buyers, backed by full marketing exposure in every industry we serve.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">workspace_premium</span>
+            <h3 class="font-headline-md text-headline-md mb-2">Certified Assets</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Every asset undergoes rigorous multi-point functionality verification.</p>
+        </div>
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">inventory</span>
+            <h3 class="font-headline-md text-headline-md mb-2">Guaranteed Functional</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Verified equipment with manuals and accessories included.</p>
+        </div>
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">history</span>
+            <h3 class="font-headline-md text-headline-md mb-2">Pedigree &amp; Maintenance</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Full PM history and pedigree tracking, fully transparent.</p>
+        </div>
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">local_shipping</span>
+            <h3 class="font-headline-md text-headline-md mb-2">White Glove Logistics</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Specialized delivery and installation by expert handlers.</p>
+        </div>
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">assignment_turned_in</span>
+            <h3 class="font-headline-md text-headline-md mb-2">Certified Calibration</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Includes certification and a 30-day warranty.</p>
+        </div>
+        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <span class="material-symbols-outlined text-primary-container text-3xl mb-4">campaign</span>
+            <h3 class="font-headline-md text-headline-md mb-2">Targeted Buyer Outreach</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Placement, advertising, and outreach to a select buyer portfolio.</p>
+        </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-2 gap-gutter max-w-xl mx-auto">
+        <div class="p-6 bg-surface-container-low rounded-lg border-l-4 border-primary-container text-center">
+            <div class="text-headline-md font-bold text-primary-container mb-1">40+</div>
+            <div class="font-label-md text-label-md text-secondary">Years Industry Experience</div>
+        </div>
+        <div class="p-6 bg-surface-container-low rounded-lg border-l-4 border-primary-container text-center">
+            <div class="text-headline-md font-bold text-primary-container mb-1">100%</div>
+            <div class="font-label-md text-label-md text-secondary">Returns &amp; Exchanges</div>
+        </div>
+    </div>
+</section>
+
+<!-- Live Auctions Section -->
+<section class="py-xl px-margin-desktop bg-surface-container-low overflow-hidden" id="auctions">
+    <div class="max-w-screen-2xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+            <div class="order-2 lg:order-1">
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img alt="Precision Medical Instrumentation" class="w-full aspect-[4/3] object-cover" src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1000&q=80" />
+                    <div class="absolute top-6 left-6 flex gap-2">
+                        <span class="bg-error text-white px-3 py-1 rounded-sm font-mono-label text-[10px] uppercase animate-pulse">Live Now</span>
+                        <span class="bg-surface/80 backdrop-blur-md px-3 py-1 rounded-sm font-mono-label text-[10px] uppercase text-on-surface">Asset 492-B</span>
+                    </div>
+                </div>
+            </div>
+            <div class="order-1 lg:order-2 space-y-6">
+                <div class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container font-mono-label text-mono-label rounded-sm uppercase">Global Platform</div>
+                <h2 class="font-headline-lg text-headline-lg">Widest Offering: Live Auctions</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Equipment and instruments offered for quick, as-is sale to a large international pool of buyers, brokers, and handlers.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+                        <div>
+                            <h5 class="font-label-md text-label-md text-on-surface">Reserve Control</h5>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">Minimum value reserves and logistics management on every asset.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary-container mt-1">check_circle</span>
+                        <div>
+                            <h5 class="font-label-md text-label-md text-on-surface">Fair Market Value</h5>
+                            <p class="font-body-sm text-body-sm text-on-surface-variant">True market valuations through competitive international bidding.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pt-2">
+                    <a class="pill-btn inline-block bg-primary-container text-on-primary px-6 py-3 rounded-full text-sm font-bold" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">View Current Auction Catalog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA / Contact -->
+<section class="py-xl px-margin-desktop bg-white">
+    <div class="max-w-screen-xl mx-auto glass-card rounded-2xl p-12 lg:p-20 text-center border-none shadow-xl relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-tertiary/5 rounded-full blur-3xl"></div>
+        <h2 class="font-headline-xl text-headline-xl mb-6 relative z-10">Ready to manage or dispose of your assets?</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto relative z-10">
+            Full-cycle management and strategic disposal for your surplus capital equipment.
+        </p>
+        <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-6 relative z-10">
+            <a class="flex items-center gap-3 font-headline-md text-headline-md text-primary-container font-bold" href="tel:+19252940220">
+                <span class="material-symbols-outlined text-3xl">phone_in_talk</span>
+                + (925) 294-0220
+            </a>
+            <a class="pill-btn bg-primary-container text-on-primary px-12 py-5 rounded-full font-label-md text-label-md hover:shadow-xl transition-all" href="/contact/">
+                Contact Our Experts
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full rounded-t-xl mt-lg">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl w-full max-w-screen-2xl mx-auto">
+        <div class="md:col-span-1">
+            <div class="flex items-center gap-2 mb-6">
+                <img alt="ASM-360 Logo" class="h-8 w-auto rounded" src="https://placehold.co/200x80/0c7161/ffffff?text=ASM-360" />
+                <span class="font-headline-md text-headline-md text-on-surface dark:text-on-surface-variant font-bold">ASM-360</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-secondary mb-6">Consolidated logistics solutions for assets, capital equipment, and comprehensive management of Sunset and Legacy solutions.</p>
+        </div>
+
+        <div>
+            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Useful Links</h4>
+            <ul class="space-y-4">
+                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="/contact/">Contact Us</a></li>
+                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="/value-proposition/">Value Proposition</a></li>
+                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a></li>
+                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Get In Touch</h4>
+            <div class="space-y-4">
+                <div class="flex gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">call</span>
+                    <div>
+                        <p class="font-mono-label text-mono-label text-secondary mb-1">Phone Number</p>
+                        <p class="font-body-sm text-body-sm text-on-surface font-semibold">+ (925) 294-0220</p>
+                    </div>
+                </div>
+                <div class="flex gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                    <div>
+                        <p class="font-mono-label text-mono-label text-secondary mb-1">Email Address</p>
+                        <p class="font-body-sm text-body-sm text-on-surface font-semibold">info@asm-360.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Office Address</h4>
+            <div class="flex gap-3">
+                <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                <div>
+                    <p class="font-body-sm text-body-sm text-on-surface font-semibold">7671 Hawthorne Avenue<br/>Livermore, CA 94550</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="border-t border-outline-variant/30 px-margin-desktop py-6">
+        <p class="font-body-sm text-body-sm text-secondary text-center">© 2024 ASM-360 Asset Management. California Headquarters. | developed by: intellectium.io</p>
+    </div>
+</footer>
+
+<script>
+    (function () {
+        // Scroll reveal: secciones completas
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('body > section, header + section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            sectionObserver.observe(section);
+        });
+
+        // Stagger para las tarjetas
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-6');
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.bento-card').forEach((card, i) => {
+            card.classList.add('opacity-0', 'translate-y-6', 'transition-all', 'duration-700');
+            card.style.transitionDelay = `${(i % 6) * 100}ms`;
+            cardObserver.observe(card);
+        });
+    })();
+</script>
+<script>
+(function () {
+    const normalize = (path) => path.replace(/\/index\.html$/, '/').replace(/\/+$/, '') || '/';
+    const currentPath = normalize(window.location.pathname);
+
+    document.querySelectorAll('.nav-link').forEach((link) => {
+        // Los links externos (ej. Auctions con target=_blank) nunca se marcan como activos
+        if (link.target === '_blank') return;
+
+        const linkPath = normalize(new URL(link.getAttribute('href'), window.location.origin).pathname);
+
+        if (linkPath === currentPath) {
+            link.classList.add('text-primary', 'font-bold', 'border-primary');
+            link.classList.remove('text-on-surface-variant', 'border-transparent');
+        } else {
+            link.classList.add('text-on-surface-variant', 'border-transparent');
+            link.classList.remove('text-primary', 'font-bold', 'border-primary');
+        }
+    });
+
+    // Si un item dentro del dropdown "Services" quedó activo, resalta también el trigger
+    document.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
+        const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        const activeItem = dropdown.querySelector('.nav-link.text-primary');
+        if (trigger && activeItem) {
+            trigger.classList.add('text-primary', 'font-bold', 'border-primary');
+            trigger.classList.remove('text-on-surface-variant', 'border-transparent');
+        }
+    });
+})();
+</script>
+</body>
+</html>

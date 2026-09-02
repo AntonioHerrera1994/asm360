@@ -172,25 +172,51 @@
     </nav>
 </header>
 
-<!-- Hero Section -->
-<header class="relative min-h-[80vh] flex items-center overflow-hidden px-margin-desktop">
-    <div class="absolute inset-0 z-0">
-        <div class="w-full h-full bg-cover bg-center" data-alt="A high-tech industrial robotic arm representing precision asset management, with cool blue ambient lighting in a modern automated facility." style="background-image: url('https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?auto=format&fit=crop&w=1920&q=80')"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
-    </div>
-    <div class="relative z-10 max-w-3xl">
-        <span class="font-mono-label text-mono-label uppercase tracking-widest text-primary mb-4 block">Global Leaders</span>
-        <h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">
-            Our <span class="text-primary-container">Value Proposition</span>
-        </h1>
-        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-            We mobilize competency through the right team. ASM-360 offers strategic leadership in asset management and industrial equipment lifecycle services.
-        </p>
-        <div class="mt-8 flex flex-wrap items-center gap-3">
-            <button class="pill-btn bg-primary-container text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:shadow-lg transition-all">Explore Services</button>
-            <button class="pill-btn border-2 border-outline text-on-surface px-8 py-3 rounded-full font-label-md text-label-md hover:bg-surface-container transition-all">Case Studies</button>
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
+    <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4">
+            <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
+          
         </div>
-    </div>
+ 
+        <div class="hidden md:flex items-center gap-8" id="nav-links">
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/">About Us</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
+                    Auctions
+                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                </button>
+                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://auctions.asminc360.com" target="_blank">Dedicated Auctions</a>
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Prime Auctions</a>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/gallery" target="_blank">Marketplace</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/contact/">Contact</a>
+            <div class="nav-dropdown relative group">
+                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
+                    Services
+                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+                </button>
+                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/white-glove/">Prime Services</a>
+                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://thewhiteglovewarehouse.com/services/" target="_blank">White Glove</a>
+                    </div>
+                </div>
+            </div>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
+            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
+        </div>
+ 
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform">Get Quote</button>
+            <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
+        </div>
+    </nav>
 </header>
 
     <!-- What Do You Need Today? - EquipNet-style action blocks -->
