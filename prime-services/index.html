@@ -134,6 +134,9 @@
         .pill-btn:hover {
             transform: translateY(-2px);
         }
+        .gradient-topbar {
+            background: linear-gradient(90deg, #0c7161 0%, rgba(12, 113, 97, 0.35) 55%, rgba(190, 201, 196, 0.25) 100%);
+        }
     </style>
 </head>
 
@@ -220,7 +223,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             <!-- Column 1: Buy Equipment -->
-            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+            <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-4">shopping_cart</span>
                 <h3 class="font-headline-md text-headline-md mb-2">Buy Equipment</h3>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
@@ -233,7 +237,8 @@
             </div>
 
             <!-- Column 2: Sell Equipment -->
-            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+            <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-4">sell</span>
                 <h3 class="font-headline-md text-headline-md mb-2">Sell Equipment</h3>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
@@ -246,7 +251,8 @@
             </div>
 
             <!-- Column 3: Manage Assets -->
-            <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+            <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8 flex flex-col">
+                <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                 <span class="material-symbols-outlined text-primary-container text-4xl mb-4">dashboard</span>
                 <h3 class="font-headline-md text-headline-md mb-2">Manage Assets</h3>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
@@ -273,32 +279,38 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">workspace_premium</span>
             <h3 class="font-headline-md text-headline-md mb-2">Certified Assets</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Every asset undergoes rigorous multi-point functionality verification.</p>
         </div>
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">inventory</span>
             <h3 class="font-headline-md text-headline-md mb-2">Guaranteed Functional</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Verified equipment with manuals and accessories included.</p>
         </div>
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">history</span>
             <h3 class="font-headline-md text-headline-md mb-2">Pedigree &amp; Maintenance</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Full PM history and pedigree tracking, fully transparent.</p>
         </div>
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">local_shipping</span>
             <h3 class="font-headline-md text-headline-md mb-2">White Glove Logistics</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Specialized delivery and installation by expert handlers.</p>
         </div>
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">assignment_turned_in</span>
             <h3 class="font-headline-md text-headline-md mb-2">Certified Calibration</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Includes certification and a 30-day warranty.</p>
         </div>
-        <div class="bento-card bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+        <div class="bento-card relative overflow-hidden bg-white rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.04)] p-8">
+            <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
             <span class="material-symbols-outlined text-primary-container text-3xl mb-4">campaign</span>
             <h3 class="font-headline-md text-headline-md mb-2">Targeted Buyer Outreach</h3>
             <p class="font-body-sm text-body-sm text-on-surface-variant">Placement, advertising, and outreach to a select buyer portfolio.</p>
