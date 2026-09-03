@@ -161,15 +161,19 @@
     background-color: #05493e;
     color: #ffffff;
 }
+
+.brand img{
+    width: 80px;
+}
     </style>
 </head>
 <body class="text-on-surface font-body-md selection:on-primary/20">
 
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
-    <nav class="flex justify-between items-center px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
-        <div class="flex items-center gap-4">
-            <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
+<nav class="flex items-center gap-12 px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
+        <div class="flex items-center gap-4 brand">
+           <a href="/"> <img alt="ASM-360 Logo" class="w-auto rounded" src="/assets/logo.png" /></a>
         </div>
 
         <div class="hidden md:flex items-center gap-8" id="nav-links">
@@ -203,8 +207,8 @@
             <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
         </div>
 
-        <div class="flex items-center gap-4">
-            <a class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform" href="https://auctions.asminc360.com/sign-up" target="_blank" rel="noopener">Start Bidding</a>
+        <div class="flex items-center gap-4 ml-auto">
+            <a class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform " href="https://auctions.asminc360.com/sign-up" target="_blank" rel="noopener">Start Bidding</a>
             <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
         </div>
     </nav>
