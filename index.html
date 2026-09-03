@@ -122,9 +122,9 @@
             animation: marquee 30s linear infinite;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(12, 113, 97, 0.1);
+           background: linear-gradient(135deg, #eef1f0 0%, #ffffff 55%, rgba(12, 113, 97, 0.08) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(12, 113, 97, 0.1);
         }
         .bento-card-hover {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -140,12 +140,21 @@
             transform: translateY(-2px);
         }
         body {
-            background-color: #ffffff;
+            background: white;
             overflow-x: hidden;
+        }
+        .gradient-card {
+            background: linear-gradient(145deg, #f3f5f4 0%, #eef1f0 55%, rgba(12, 113, 97, 0.06) 100%);
+        }
+        .gradient-topbar {
+            background: linear-gradient(90deg, #0c7161 0%, rgba(12, 113, 97, 0.35) 55%, rgba(190, 201, 196, 0.25) 100%);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, #eef1f0 0%, #f6f8f7 55%, rgba(12, 113, 97, 0.06) 100%);
         }
     </style>
 </head>
-<body class="text-on-surface font-body-md selection:bg-primary/20">
+<body class="text-on-surface font-body-md selection:on-primary/20">
 
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
@@ -195,7 +204,7 @@
 
     <main class="relative z-10">
         <!-- Hero Section -->
-        <section class="min-h-screen pt-32 flex flex-col justify-center items-center px-margin-desktop text-center bg-gradient-to-b from-primary/5 to-white">
+        <section class="min-h-screen pt-32 flex flex-col justify-center items-center px-margin-desktop text-center hero-gradient">
             <div class="relative w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
                 <div class="text-left space-y-8">
                     <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">
@@ -230,11 +239,11 @@
                         </div>
                         <div class="text-left space-y-4 w-full md:w-1/2">
                             <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">#1 Distributor in America</span>
-                            <h3 class="text-2xl font-bold text-on-surface">Hirayama HAST Dual Vessel</h3>
+                            <h3 class="text-2xl font-bold text-on-surface">Hirayama HAST Dual Vessel System</h3>
                             <p class="text-sm text-on-surface-variant leading-relaxed">
                                 The only true dual vessel HAST Chamber. Condensation and contamination free test environment with controlled humidity during ramp down. Ideal for Semiconductors.
                             </p>
-                            <a class="inline-flex items-center text-primary font-bold gap-2 hover:underline" href="https://auctions.asminc360.com/search/product-buyer-auction/2560" target="_blank">
+                            <a class="inline-flex items-center text-primary font-bold gap-2 hover:underline" href="https://esurplusinc.com/hirayama-new" target="_blank">
                                 View Specifications <span class="material-symbols-outlined">arrow_outward</span>
                             </a>
                             <div class="pt-4 border-t border-outline/10 flex items-start gap-3">
@@ -289,7 +298,8 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-bento-gap">
                 <!-- Column 1: Buy Equipment -->
-                <div class="bento-card-hover rounded-3xl p-8 bg-white shadow-xl border-t-4 border-primary flex flex-col">
+                <div class="bento-card-hover relative overflow-hidden rounded-3xl p-8 gradient-card shadow-xl flex flex-col">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-3xl">shopping_cart</span>
                     </div>
@@ -298,13 +308,15 @@
                         Certified equipment ready for immediate redeployment.
                     </p>
                     <div class="flex flex-col gap-3 mt-auto">
-                        <a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Marketplace</a>
-                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/gallery" target="_blank" rel="noopener">Auctions</a>
+                        <a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="https://auctions.asminc360.com/gallery" target="_blank" rel="noopener">Auctions</a>
+                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://auctions.asminc360.com/" target="_blank" rel="noopener">Marketplace</a>
+                        
                     </div>
                 </div>
 
                 <!-- Column 2: Sell Equipment -->
-                <div class="bento-card-hover rounded-3xl p-8 bg-white shadow-xl border-t-4 border-primary flex flex-col">
+                <div class="bento-card-hover relative overflow-hidden rounded-3xl p-8 gradient-card shadow-xl flex flex-col">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-3xl">sell</span>
                     </div>
@@ -319,7 +331,8 @@
                 </div>
 
                 <!-- Column 3: Manage Assets -->
-                <div class="bento-card-hover rounded-3xl p-8 bg-white shadow-xl border-t-4 border-primary flex flex-col">
+                <div class="bento-card-hover relative overflow-hidden rounded-3xl p-8 gradient-card shadow-xl flex flex-col">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-5">
                         <span class="material-symbols-outlined text-primary text-3xl">dashboard</span>
                     </div>
@@ -328,9 +341,10 @@
                         Turnkey programs to identify, track, and redeploy equipment across your organization.
                     </p>
                     <div class="flex flex-col gap-3 mt-auto">
-                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://thewhiteglovewarehouse.com/services/">Corporate Global Program</a>
+                         <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="prime-services/">White Glove Intra-Sites</a>
                         <a class="pill-btn w-full text-center block bg-primary text-on-primary px-5 py-3 rounded-full text-sm font-bold shadow-md" href="/oem-distribuitors/">Manufacturer</a>
-                        <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="prime-services/">White Glove Intra-Sites</a>
+                         <a class="pill-btn w-full text-center block bg-white border border-primary/30 text-primary px-5 py-3 rounded-full text-sm font-bold hover:bg-primary hover:text-white" href="https://thewhiteglovewarehouse.com/services/">Corporate Global Program</a>
+                       
                     </div>
                 </div>
             </div>
@@ -344,37 +358,44 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-bento-gap">
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">currency_exchange</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Buy and Sell</h3>
                     <p class="text-sm text-on-surface-variant">Quick cash, consignments, and strategic liquidation through ASM360 Marketplace ®.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">analytics</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Valuation</h3>
                     <p class="text-sm text-on-surface-variant">Fair Market Value assessments for disposition assets, plant, and machinery.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">hub</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">ASM360 Marketplace ®</h3>
                     <p class="text-sm text-on-surface-variant">Reserve bidding, Bid Spotter integration, and full logistics for top-value disposition.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">inventory_2</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Consignment</h3>
                     <p class="text-sm text-on-surface-variant">Secure storage and global buyer exposure for your assets.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">precision_manufacturing</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Value Add Services</h3>
                     <p class="text-sm text-on-surface-variant">Servicing, calibration, and PM cycles on test equipment for maximum returns.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">recycling</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Recycling & Repurposing</h3>
                     <p class="text-sm text-on-surface-variant">Controlled destruction, material repurposing, and full environmental certification.</p>
                 </div>
-                <div class="bento-card-hover bg-white rounded-2xl p-6 border border-outline/10 shadow-sm">
+                <div class="bento-card-hover gradient-card relative overflow-hidden rounded-2xl p-6 border border-outline/10 shadow-sm">
+                    <div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
                     <span class="material-symbols-outlined text-primary text-3xl mb-3">biotech</span>
                     <h3 class="font-bold text-lg text-on-surface mb-1">Technology Transplants</h3>
                     <p class="text-sm text-on-surface-variant">Managing EOL and sunset technologies for global, cost-effective redeployment.</p>
