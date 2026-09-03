@@ -124,6 +124,9 @@
         .pill-btn:hover {
             transform: translateY(-2px);
         }
+        .gradient-topbar {
+            background: linear-gradient(90deg, #00574a 0%, rgba(0, 87, 74, 0.35) 55%, rgba(190, 201, 196, 0.25) 100%);
+        }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #faf8ff; }
         ::-webkit-scrollbar-thumb { background: #00574a; border-radius: 4px; }
@@ -246,10 +249,11 @@
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <!-- Column 1: Buy Equipment -->
-<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-base">shopping_cart</span>
-<h3 class="font-headline-md text-headline-md mb-base">Buy Equipment</h3>
-<p class="font-body-sm text-body-sm text-secondary mb-md">
+<div class="action-card relative overflow-hidden bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col" style="background: #2a2d2dc3;">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-base" style="color:white">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md mb-base" style="color:white">Buy Equipment</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md" style="color:white">
                         Certified equipment ready for immediate redeployment.
                     </p>
 <div class="flex flex-col gap-sm mt-auto">
@@ -259,10 +263,11 @@
 </div>
 
 <!-- Column 2: Sell Equipment -->
-<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-base">sell</span>
-<h3 class="font-headline-md text-headline-md mb-base">Sell Equipment</h3>
-<p class="font-body-sm text-body-sm text-secondary mb-md">
+<div class="action-card relative overflow-hidden bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col" style="background: #2a2d2dc3;">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-base" style="color:white">sell</span>
+<h3 class="font-headline-md text-headline-md mb-base" style="color:white">Sell Equipment</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md" style="color:white">
                         We recover maximum value from surplus, closures, and reorganizations.
                     </p>
 <div class="flex flex-col gap-sm mt-auto">
@@ -272,10 +277,11 @@
 </div>
 
 <!-- Column 3: Manage Assets -->
-<div class="action-card bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-base">dashboard</span>
-<h3 class="font-headline-md text-headline-md mb-base">Manage Assets</h3>
-<p class="font-body-sm text-body-sm text-secondary mb-md">
+<div class="action-card relative overflow-hidden bg-surface-container-low rounded-xl border border-outline-variant p-lg hover:shadow-lg transition-all duration-300 flex flex-col" style="background: #2a2d2dc3;">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
+<span class="material-symbols-outlined text-primary text-4xl mb-base" style="color:white">dashboard</span>
+<h3 class="font-headline-md text-headline-md mb-base" style="color:white">Manage Assets</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-md" style="color:white">
                         Turnkey programs to identify, track, and redeploy equipment across your organization.
                     </p>
 <div class="flex flex-col gap-sm mt-auto">
@@ -297,17 +303,20 @@
                         ASM360, a <span class="font-bold text-primary">minority, woman-owned business</span>, thrives on superior product knowledge and a "second to none" sourcing network.
                     </p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter pt-lg">
-<div class="p-md bg-surface rounded-xl shadow-sm border-t-4 border-primary">
+<div class="relative overflow-hidden p-md bg-surface rounded-xl shadow-sm">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
 <span class="material-symbols-outlined text-primary text-4xl mb-base">verified</span>
 <h4 class="font-headline-md text-headline-md mb-xs text-primary">MWBE Certified</h4>
 <p class="font-body-sm text-body-sm text-secondary">A minority, woman-owned enterprise dedicated to excellence.</p>
 </div>
-<div class="p-md bg-surface rounded-xl shadow-sm border-t-4 border-primary">
+<div class="relative overflow-hidden p-md bg-surface rounded-xl shadow-sm">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
 <span class="material-symbols-outlined text-primary text-4xl mb-base">public</span>
 <h4 class="font-headline-md text-headline-md mb-xs text-primary">Global Network</h4>
 <p class="font-body-sm text-body-sm text-secondary">Worldwide sourcing reaching across continents and industries.</p>
 </div>
-<div class="p-md bg-surface rounded-xl shadow-sm border-t-4 border-primary">
+<div class="relative overflow-hidden p-md bg-surface rounded-xl shadow-sm">
+<div class="absolute top-0 left-0 right-0 h-2 gradient-topbar"></div>
 <span class="material-symbols-outlined text-primary text-4xl mb-base">engineering</span>
 <h4 class="font-headline-md text-headline-md mb-xs text-primary">Proven Expertise</h4>
 <p class="font-body-sm text-body-sm text-secondary">Four decades of combined experience in test equipment.</p>
