@@ -141,79 +141,7 @@
 
 <body class="bg-surface font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-<!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
-    <nav class="flex items-center gap-12 px-margin-desktop py-4 w-full max-w-screen-2xl mx-auto">
-        <div class="flex items-center gap-4">
-            <img alt="ASM-360 Logo" class="h-16 w-auto rounded" src="/assets/logo.png" />
-        </div>
 
-        <div class="hidden md:flex items-center gap-8" id="nav-links">
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/">About Us</a>
-            <div class="nav-dropdown relative group">
-                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
-                    Auctions
-                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
-                </button>
-                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
-                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://auctions.asminc360.com" target="_blank">Dedicated Auctions</a>
-                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Prime Auctions</a>
-                    </div>
-                </div>
-            </div>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="https://auctions.asminc360.com/gallery" target="_blank">Marketplace</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/contact/">Contact</a>
-            <div class="nav-dropdown relative group">
-                <button class="nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent">
-                    Services
-                    <span class="material-symbols-outlined text-base transition-transform duration-200 group-hover:rotate-180">expand_more</span>
-                </button>
-                <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
-                    <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
-                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/prime-services/">Prime Services</a>
-                        <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="https://thewhiteglovewarehouse.com/services/" target="_blank">White Glove</a>
-                    </div>
-                </div>
-            </div>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
-            <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">OEM Distributors</a>
-        </div>
-
-        <div class="flex items-center gap-4 ml-auto">
-            <a class="hidden md:block bg-primary-container text-on-primary font-label-md text-label-md px-6 py-2 rounded-lg active:scale-95 transition-transform" href="https://auctions.asminc360.com/sign-up" target="_blank" rel="noopener">Start Bidding</a>
-            <span class="material-symbols-outlined cursor-pointer md:hidden" id="mobile-menu-toggle">menu</span>
-        </div>
-    </nav>
-
-    <!-- Mobile menu panel -->
-    <div class="hidden md:hidden bg-white border-t border-outline-variant/30 max-h-[calc(100vh-72px)] overflow-y-auto" id="mobile-menu">
-        <div class="flex flex-col px-6 py-4">
-            <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/">About Us</a>
-            <button class="mobile-accordion-trigger flex items-center justify-between py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md w-full text-left">
-                Auctions
-                <span class="material-symbols-outlined text-base transition-transform duration-200">expand_more</span>
-            </button>
-            <div class="mobile-accordion-panel hidden pl-4">
-                <a class="block py-2.5 text-sm text-on-surface-variant" href="https://auctions.asminc360.com" target="_blank">Dedicated Auctions</a>
-                <a class="block py-2.5 text-sm text-on-surface-variant" href="https://www.bidspotter.com/en-us/auction-catalogues/bcsasminc" target="_blank">Prime Auctions</a>
-            </div>
-            <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="https://auctions.asminc360.com/gallery" target="_blank">Marketplace</a>
-            <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/contact/">Contact</a>
-            <button class="mobile-accordion-trigger flex items-center justify-between py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md w-full text-left">
-                Services
-                <span class="material-symbols-outlined text-base transition-transform duration-200">expand_more</span>
-            </button>
-            <div class="mobile-accordion-panel hidden pl-4">
-                <a class="block py-2.5 text-sm text-on-surface-variant" href="/prime-services/">Prime Services</a>
-                <a class="block py-2.5 text-sm text-on-surface-variant" href="https://thewhiteglovewarehouse.com/services/" target="_blank">White Glove</a>
-            </div>
-            <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/value-proposition/">Value Proposition</a>
-            <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
-            <a class="bg-primary-container text-on-primary font-label-md text-label-md px-6 py-3 rounded-lg text-center mt-4" href="https://auctions.asminc360.com/sign-up" target="_blank" rel="noopener">Start Bidding</a>
-        </div>
-    </div>
-</header>
 
 <!-- 404 Hero -->
 <section class="min-h-screen flex items-center justify-center px-margin-desktop pt-32 pb-20 bg-gradient-to-b from-primary/5 to-white overflow-hidden">
@@ -281,62 +209,6 @@
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-<footer class="bg-surface-container-low dark:bg-surface-container-lowest w-full rounded-t-xl">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-xl w-full max-w-screen-2xl mx-auto">
-        <div class="md:col-span-1">
-            <div class="flex items-center gap-2 mb-6">
-                <img alt="ASM-360 Logo" class="h-8 w-auto rounded" src="https://placehold.co/200x80/0c7161/ffffff?text=ASM-360" />
-                <span class="font-headline-md text-headline-md text-on-surface dark:text-on-surface-variant font-bold">ASM-360</span>
-            </div>
-            <p class="font-body-sm text-body-sm text-secondary mb-6">We offer a consolidated logistics solution for your assets, capital equipment, and Sunset solutions.</p>
-        </div>
-
-        <div>
-            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Useful Links</h4>
-            <ul class="space-y-4">
-                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="/contact/">Contact Us</a></li>
-                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Privacy Policy</a></li>
-                <li><a class="font-body-sm text-body-sm text-secondary hover:text-primary underline-offset-4 hover:underline transition-all" href="#">Terms & Conditions</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Get In Touch</h4>
-            <div class="space-y-4">
-                <div class="flex gap-3">
-                    <span class="material-symbols-outlined text-primary text-sm">call</span>
-                    <div>
-                        <p class="font-mono-label text-mono-label text-secondary mb-1">Phone Number</p>
-                        <p class="font-body-sm text-body-sm text-on-surface font-semibold">+ (925) 294-0220</p>
-                    </div>
-                </div>
-                <div class="flex gap-3">
-                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
-                    <div>
-                        <p class="font-mono-label text-mono-label text-secondary mb-1">Email Address</p>
-                        <p class="font-body-sm text-body-sm text-on-surface font-semibold">info@asm-360.com</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <h4 class="font-label-md text-label-md text-primary dark:text-inverse-primary font-semibold mb-6">Office Address</h4>
-            <div class="flex gap-3">
-                <span class="material-symbols-outlined text-primary text-sm">location_on</span>
-                <div>
-                    <p class="font-body-sm text-body-sm text-on-surface font-semibold">7671 Hawthorne Avenue<br/>Livermore, CA 94550</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="border-t border-outline-variant/30 px-margin-desktop py-6">
-        <p class="font-body-sm text-body-sm text-secondary text-center">© 2024 ASM-360 Asset Management. California Headquarters. | developed by: intellectium.io</p>
-    </div>
-</footer>
 
 <script src="/assets/js/site.js" defer></script>
 </body>
