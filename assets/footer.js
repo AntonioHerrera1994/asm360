@@ -33,14 +33,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="material-symbols-outlined text-primary mt-1">phone</span>
                         <div>
                             <p class="font-bold text-on-surface">Phone Number</p>
+                            <a href="tel:+19255056141">
                             <p>+(925) 505-6141</p>
+                            </a>
                         </div>
                     </li>
                     <li class="flex items-start gap-4">
                         <span class="material-symbols-outlined text-primary mt-1">mail</span>
                         <div>
                             <p class="font-bold text-on-surface">Email Address</p>
+                            <a href="mailto:info@asm-360.com">
                             <p>info@asm-360.com</p>
+                            </a>
                         </div>
                     </li>
                 </ul>
