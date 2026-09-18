@@ -65,35 +65,3 @@
     })();
 
 
-(function () {
-    const toggleBtn = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (!toggleBtn || !mobileMenu) return;
-
-    toggleBtn.addEventListener('click', () => {
-        const isOpen = !mobileMenu.classList.contains('hidden');
-        mobileMenu.classList.toggle('hidden');
-        toggleBtn.textContent = isOpen ? 'menu' : 'close';
-    });
-
-    // Acordeón para Auctions / Services dentro del menú móvil
-    document.querySelectorAll('.mobile-accordion-trigger').forEach((trigger) => {
-        trigger.addEventListener('click', () => {
-            const panel = trigger.nextElementSibling;
-            const icon = trigger.querySelector('.material-symbols-outlined');
-            const isOpen = !panel.classList.contains('hidden');
-
-            panel.classList.toggle('hidden');
-            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
-        });
-    });
-
-    // Cierra el menú móvil automáticamente si tocan un link normal
-    document.querySelectorAll('#mobile-menu a').forEach((link) => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            toggleBtn.textContent = 'menu';
-        });
-    });
-})();

@@ -1,3 +1,9 @@
+// ============================================================
+// ASM-360 — Navbar component (shared across all pages)
+// OEM Distributors is a clickable link AND a dropdown trigger,
+// revealing "Hanwa ESD" as a clickable sub-item.
+// ============================================================
+
 (function () {
     const navbarHTML = `
     <header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
@@ -38,8 +44,8 @@
                     </div>
                 </div>
 
+                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
 
-                <!-- OEM Distributors: clickable link + dropdown trigger for Hanwa -->
                 <div class="nav-dropdown relative group">
                     <a class="nav-link nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">
                         OEM Distributors
@@ -59,7 +65,6 @@
             </div>
         </nav>
 
-        <!-- Mobile menu panel -->
         <div class="hidden md:hidden bg-white border-t border-outline-variant/30 max-h-[calc(100vh-72px)] overflow-y-auto" id="mobile-menu">
             <div class="flex flex-col px-6 py-4">
                 <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/">About Us</a>
@@ -87,7 +92,6 @@
 
                 <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/value-proposition/">Value Proposition</a>
 
-                <!-- OEM Distributors: label is a real link, chevron is a separate tap target for the accordion -->
                 <div class="flex items-center justify-between border-b border-outline-variant/20">
                     <a class="mobile-nav-link py-3 flex-1 text-on-surface-variant font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
                     <button class="mobile-accordion-trigger p-3 text-on-surface-variant" aria-label="Toggle OEM Distributors submenu">
@@ -105,9 +109,49 @@
     `;
 
     const placeholder = document.getElementById('navbar-placeholder');
-    if (placeholder) {
-        placeholder.innerHTML = navbarHTML;
-    } else {
+    if (!placeholder) {
         console.warn('navbar.js: no se encontró <div id="navbar-placeholder"></div> en esta página.');
+        return;
+    }
+
+    placeholder.innerHTML = navbarHTML;
+
+    // ---- Lógica del menú móvil, autocontenida (no depende de site.js) ----
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            toggleBtn.textContent = isOpen ? 'menu' : 'close';
+        });
+
+      mobileMenu.querySelectorAll('.mobile-accordion-trigger').forEach((trigger) => {
+    trigger.addEventListener('click', () => {
+        // Caso normal: el panel es hermano directo del botón (Auctions, Services)
+        let panel = trigger.nextElementSibling;
+
+        // Caso OEM Distributors: el botón está envuelto junto al link,
+        // así que el panel real es hermano del DIV contenedor, no del botón
+        if (!panel || !panel.classList.contains('mobile-accordion-panel')) {
+            panel = trigger.parentElement.nextElementSibling;
+        }
+
+        if (!panel) return;
+
+        const icon = trigger.querySelector('.material-symbols-outlined') || trigger;
+        const isOpen = !panel.classList.contains('hidden');
+        panel.classList.toggle('hidden');
+        icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+});
+
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                toggleBtn.textContent = 'menu';
+            });
+        });
     }
 })();
