@@ -44,7 +44,7 @@
                     </div>
                 </div>
 
-                <a class="nav-link text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/value-proposition/">Value Proposition</a>
+          
 
                 <div class="nav-dropdown relative group">
                     <a class="nav-link nav-dropdown-trigger flex items-center gap-1 text-on-surface-variant hover:text-primary transition-colors duration-200 font-body-md pb-1 border-b-2 border-transparent" href="/oem-distribuitors/">
@@ -90,7 +90,7 @@
                     <a class="block py-2.5 text-sm text-on-surface-variant" href="https://thewhiteglovewarehouse.com/services/" target="_blank">White Glove</a>
                 </div>
 
-                <a class="mobile-nav-link py-3 border-b border-outline-variant/20 text-on-surface-variant font-body-md" href="/value-proposition/">Value Proposition</a>
+
 
                 <div class="flex items-center justify-between border-b border-outline-variant/20">
                     <a class="mobile-nav-link py-3 flex-1 text-on-surface-variant font-body-md" href="/oem-distribuitors/">OEM Distributors</a>
