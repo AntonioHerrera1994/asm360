@@ -1,9 +1,3 @@
-// ============================================================
-// ASM-360 — Navbar component (shared across all pages)
-// OEM Distributors is a clickable link AND a dropdown trigger,
-// revealing "Hanwa ESD" as a clickable sub-item.
-// ============================================================
-
 (function () {
     const navbarHTML = `
     <header class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md shadow-sm">
@@ -54,6 +48,7 @@
                     <div class="absolute left-0 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 z-50">
                         <div class="bg-white rounded-xl shadow-lg border border-outline-variant/30 py-2 min-w-[200px]">
                             <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/hanwa/">Hanwa ESD</a>
+                            <a class="nav-link block px-5 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors font-body-md" href="/hirayama/">Hirayama</a>
                         </div>
                     </div>
                 </div>
