@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
      
                 
                 <p class="text-[11px] text-on-surface-variant leading-relaxed">
-                    © 2026 Asset Management 360, Inc. All rights reserved.
+                    © 2026 Asset Management 360, Inc. All rights reserved. <br> Developed By <a href="https://www.vikingdevtj.com" target="_blank"><b>Vikingdev</b></a>
                 </p>
             </div>
         </div>
